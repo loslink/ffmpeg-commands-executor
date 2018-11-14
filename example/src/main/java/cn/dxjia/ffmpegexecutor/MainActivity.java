@@ -43,7 +43,7 @@ public class MainActivity extends AppCompatActivity {
         mWaitingDialog = new ProgressDialog(this);
         mWaitingDialog.setProgressStyle(ProgressDialog.STYLE_SPINNER);
         mWaitingDialog.setMessage("Waiting...");
-
+        mWaitingDialog.setCanceledOnTouchOutside(false);
         mWaitingDialogHandler = new WaitingDialogHanlder();
 
 
@@ -69,12 +69,12 @@ public class MainActivity extends AppCompatActivity {
         String recordVideoPath = "sdcard/t.mp4";
         String logoPath = "sdcard/logo.png";
         String videoUri = "sdcard/out.mp4";
-        String cmd = String.format("ffmpeg  -i \"%s\" -i \"%s\" -acodec copy -ar 44100 -ac 2 -b:a 96k -vcodec libx264 -f mp4 \"%s\"",
+        String cmd = String.format("ffmpeg -i \"%s\" -i \"%s\" -acodec copy -ar 44100 -ac 2 -b:a 96k -vcodec libx264 -f mp4 \"%s\"",
                 recordVideoPath,
                 logoPath,
                 videoUri);
 
-        cmd="ffmpeg -i sdcard/t.mp4 -i sdcard/logo.png -filter_complex overlay sdcard/out2.mp4";
+//        cmd="ffmpeg -i sdcard/t.mp4 -i sdcard/logo.png -filter_complex overlay sdcard/out2.mp4";
 //        cmd="ffmpeg -i sdcard/t.mp4 -t 10 -pix_fmt rgb24 sdcard/gg.gif";
         mCurrentCommand=cmd;
         if (TextUtils.isEmpty(mCurrentCommand)) {
