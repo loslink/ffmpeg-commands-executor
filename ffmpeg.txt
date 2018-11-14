@@ -37,7 +37,6 @@ ffmpeg -i F:\tmp\alice.mp4 -vf drawtext="fontfile=C\\:\\\\Windows\\\\Fonts\\\\Ar
 
 ffmpeg -i sdcard/t.mp4 -t 10 -pix_fmt rgb24 gg.gif
 
-
 //调用摄像头
 ffplay -f dshow  -i video="Integrated Camera"
 
