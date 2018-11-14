@@ -1,0 +1,55 @@
+ffmpeg -i video1.mp4 -ss 1 testimg.jpg
+
+ffmpeg -i F:\tmp\alice.mp4 -t 10 -vf hflip F:\tmp\alice2.mp4
+
+ffmpeg -i F:\tmp\alice.mp4 -fs 11124K F:\tmp\alice2.mp4
+
+ffmpeg -i F:\tmp\alice.mp4 -s 160x120 F:\tmp\alice2.mp4
+
+ffmpeg -i F:\tmp\alice2.mp4 -vf scale=iw/2:ih/2 F:\tmp\alice3.mp4
+
+ffmpeg -i F:\tmp\alice.mp4 -vf scale=400:-1 F:\tmp\alice2.mp4
+
+ffmpeg -i F:\tmp\alice.mp4 -vf crop=iw/3:ih:0:0 F:\tmp\alice2.mp4 
+
+ffmpeg -i F:\tmp\alice.mp4 -vf crop=iw/3:ih:iw/3:0 F:\tmp\alice2.mp4 
+
+ffmpeg -i input -vf crop=iw/3:ih:iw/3*2:0 output
+
+ffmpeg -i F:\tmp\alice2.jpg -vf pad=860:660:30:30:pink F:\tmp\alice3.jpg
+
+ffmpeg -i F:\tmp\alice.mp4 -vf unsharp F:\tmp\alice2.mp4
+
+ffmpeg -i video1.mp4 -i logo.png -filter_complex overlay video_logo.mp4
+
+
+ffplay  -i F:\tmp\alice.mp4  -vf drawtext=fontfile=C\\:\\\\Windows\\\\Fonts\\\\Arial.ttf:text=Welcom
+
+ffplay  -i F:\tmp\alice.mp4 -vf drawtext="fontfile=C\\:\\\\Windows\\\\Fonts\\\\Arial.ttf:text='Goodday':x=(w-tw)/2:y=(h-th)/2:fontcolor=green:fontsize=30"
+
+ffplay -i F:\tmp\alice.mp4 -vf drawtext="fontfile=C\\:\\\\Windows\\\\Fonts\\\\Arial.ttf:text='Dynamic RTL text':x=w-t*50:fontcolor=darkorange:fontsize=30"
+
+ffplay -window_title myplayer -loop 2 F:\tmp\alice.mp4
+
+ffmpeg -i F:\tmp\alice.mp4 -vf drawtext="fontfile=C\\:\\\\Windows\\\\Fonts\\\\Arial.ttf:x=w-tw:fontcolor=white:fontsize=30:text='%{localtime\:%H\\\:%M\\\:%S}'" F:\tmp\alice2.mp4
+
+ffmpeg -i F:\tmp\alice.mp4 -t 10 -pix_fmt rgb24 F:\tmp\alice.gif
+
+
+//调用摄像头
+ffplay -f dshow  -i video="Integrated Camera"
+
+首先我们需要查看以下我们的自己上的设备信息，在安装了screen capture recorder之后就可以使用下面的命令:
+ffmpeg -list_devices true -f dshow -i dummy
+
+当然我们是要使用rtmp协议的，所以这里就需要把视频流发送到rtmp服务端去，如下命令:
+ffmpeg -f dshow -i video="Integrated Camera"  -f flv rtmp://localhost:1935/live/home
+
+//录屏
+//ffmpeg -f dshow -i video="screen-capture-recorder" -maxrate 750k   -f flv rtmp://localhost:1935/live/home
+
+ffmpeg -f dshow -i video=screen-capture-recorder -f dshow -i audio=virtual-audio-capturer -vf scale=1280:720 -vcodec libx264 -acodec libvo_aacenc -f flv "rtmp://localhost:1935/live/home"
+
+下面我们看以下ffmpeg如果从这些设备中录制视频。
+ffmpeg -f dshow -i video="Integrated Camera"  test.mp4
+
