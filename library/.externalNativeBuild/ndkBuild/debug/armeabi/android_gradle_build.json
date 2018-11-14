@@ -1,0 +1,49 @@
+{
+  "buildFiles": [
+    "D:\\AndroidStudioWorkSpase\\ffmpeg-commands-executor\\library\\jni\\Android.mk",
+    "D:\\AndroidStudioWorkSpase\\ffmpeg-commands-executor\\library\\jni\\Application.mk"
+  ],
+  "cleanCommands": [
+    "D:\\sdk\\ndk-bundle\\ndk-build.cmd NDK_PROJECT_PATH\u003dnull APP_BUILD_SCRIPT\u003dD:\\AndroidStudioWorkSpase\\ffmpeg-commands-executor\\library\\jni\\Android.mk NDK_APPLICATION_MK\u003dD:\\AndroidStudioWorkSpase\\ffmpeg-commands-executor\\library\\jni\\Application.mk APP_ABI\u003darmeabi NDK_ALL_ABIS\u003darmeabi NDK_DEBUG\u003d1 APP_PLATFORM\u003dandroid-14 NDK_OUT\u003dD:/AndroidStudioWorkSpase/ffmpeg-commands-executor/library/build/intermediates/ndkBuild/debug/obj NDK_LIBS_OUT\u003dD:\\AndroidStudioWorkSpase\\ffmpeg-commands-executor\\library\\build\\intermediates\\ndkBuild\\debug\\lib clean"
+  ],
+  "libraries": {
+    "ffmpegjni-debug-armeabi": {
+      "buildCommand": "D:\\sdk\\ndk-bundle\\ndk-build.cmd NDK_PROJECT_PATH\u003dnull APP_BUILD_SCRIPT\u003dD:\\AndroidStudioWorkSpase\\ffmpeg-commands-executor\\library\\jni\\Android.mk NDK_APPLICATION_MK\u003dD:\\AndroidStudioWorkSpase\\ffmpeg-commands-executor\\library\\jni\\Application.mk APP_ABI\u003darmeabi NDK_ALL_ABIS\u003darmeabi NDK_DEBUG\u003d1 APP_PLATFORM\u003dandroid-14 NDK_OUT\u003dD:/AndroidStudioWorkSpase/ffmpeg-commands-executor/library/build/intermediates/ndkBuild/debug/obj NDK_LIBS_OUT\u003dD:\\AndroidStudioWorkSpase\\ffmpeg-commands-executor\\library\\build\\intermediates\\ndkBuild\\debug\\lib D:/AndroidStudioWorkSpase/ffmpeg-commands-executor/library/build/intermediates/ndkBuild/debug/obj/local/armeabi/libffmpegjni.so",
+      "toolchain": "toolchain-armeabi",
+      "abi": "armeabi",
+      "artifactName": "ffmpegjni",
+      "files": [
+        {
+          "src": "D:\\AndroidStudioWorkSpase\\ffmpeg-commands-executor\\library\\jni\\FFmpegNativeHelper.c",
+          "flags": "\"-gcc-toolchain\" \"D:/sdk/ndk-bundle/build//../toolchains/arm-linux-androideabi-4.9/prebuilt/windows-x86_64\" \"-fpic\" \"-ffunction-sections\" \"-funwind-tables\" \"-fstack-protector-strong\" \"-Wno-invalid-command-line-argument\" \"-Wno-unused-command-line-argument\" \"-no-canonical-prefixes\" \"-fno-integrated-as\" \"-g\" \"-target\" \"armv5te-none-linux-androideabi14\" \"-march\u003darmv5te\" \"-mtune\u003dxscale\" \"-msoft-float\" \"-marm\" \"-O0\" \"-UNDEBUG\" \"-fno-limit-debug-info\" \"-I-L/usr/include\" \"-ID:/AndroidStudioWorkSpase/ffmpeg-commands-executor/library/jni/include\" \"-ID:/AndroidStudioWorkSpase/ffmpeg-commands-executor/library/jni\" \"-DANDROID\" \"-DUSE_ARM_CONFIG\" \"-D__ANDROID_API__\u003d14\" \"-Wa,--noexecstack\" \"-Wformat\" \"-Werror\u003dformat-security\" \"--sysroot\" \"D:/sdk/ndk-bundle/build//../sysroot\" \"-isystem\" \"D:/sdk/ndk-bundle/build//../sysroot/usr/include/arm-linux-androideabi\""
+        },
+        {
+          "src": "D:\\AndroidStudioWorkSpase\\ffmpeg-commands-executor\\library\\jni\\cmdutils.c",
+          "flags": "\"-gcc-toolchain\" \"D:/sdk/ndk-bundle/build//../toolchains/arm-linux-androideabi-4.9/prebuilt/windows-x86_64\" \"-fpic\" \"-ffunction-sections\" \"-funwind-tables\" \"-fstack-protector-strong\" \"-Wno-invalid-command-line-argument\" \"-Wno-unused-command-line-argument\" \"-no-canonical-prefixes\" \"-fno-integrated-as\" \"-g\" \"-target\" \"armv5te-none-linux-androideabi14\" \"-march\u003darmv5te\" \"-mtune\u003dxscale\" \"-msoft-float\" \"-marm\" \"-O0\" \"-UNDEBUG\" \"-fno-limit-debug-info\" \"-I-L/usr/include\" \"-ID:/AndroidStudioWorkSpase/ffmpeg-commands-executor/library/jni/include\" \"-ID:/AndroidStudioWorkSpase/ffmpeg-commands-executor/library/jni\" \"-DANDROID\" \"-DUSE_ARM_CONFIG\" \"-D__ANDROID_API__\u003d14\" \"-Wa,--noexecstack\" \"-Wformat\" \"-Werror\u003dformat-security\" \"--sysroot\" \"D:/sdk/ndk-bundle/build//../sysroot\" \"-isystem\" \"D:/sdk/ndk-bundle/build//../sysroot/usr/include/arm-linux-androideabi\""
+        },
+        {
+          "src": "D:\\AndroidStudioWorkSpase\\ffmpeg-commands-executor\\library\\jni\\ffmpeg_filter.c",
+          "flags": "\"-gcc-toolchain\" \"D:/sdk/ndk-bundle/build//../toolchains/arm-linux-androideabi-4.9/prebuilt/windows-x86_64\" \"-fpic\" \"-ffunction-sections\" \"-funwind-tables\" \"-fstack-protector-strong\" \"-Wno-invalid-command-line-argument\" \"-Wno-unused-command-line-argument\" \"-no-canonical-prefixes\" \"-fno-integrated-as\" \"-g\" \"-target\" \"armv5te-none-linux-androideabi14\" \"-march\u003darmv5te\" \"-mtune\u003dxscale\" \"-msoft-float\" \"-marm\" \"-O0\" \"-UNDEBUG\" \"-fno-limit-debug-info\" \"-I-L/usr/include\" \"-ID:/AndroidStudioWorkSpase/ffmpeg-commands-executor/library/jni/include\" \"-ID:/AndroidStudioWorkSpase/ffmpeg-commands-executor/library/jni\" \"-DANDROID\" \"-DUSE_ARM_CONFIG\" \"-D__ANDROID_API__\u003d14\" \"-Wa,--noexecstack\" \"-Wformat\" \"-Werror\u003dformat-security\" \"--sysroot\" \"D:/sdk/ndk-bundle/build//../sysroot\" \"-isystem\" \"D:/sdk/ndk-bundle/build//../sysroot/usr/include/arm-linux-androideabi\""
+        },
+        {
+          "src": "D:\\AndroidStudioWorkSpase\\ffmpeg-commands-executor\\library\\jni\\ffmpeg_opt.c",
+          "flags": "\"-gcc-toolchain\" \"D:/sdk/ndk-bundle/build//../toolchains/arm-linux-androideabi-4.9/prebuilt/windows-x86_64\" \"-fpic\" \"-ffunction-sections\" \"-funwind-tables\" \"-fstack-protector-strong\" \"-Wno-invalid-command-line-argument\" \"-Wno-unused-command-line-argument\" \"-no-canonical-prefixes\" \"-fno-integrated-as\" \"-g\" \"-target\" \"armv5te-none-linux-androideabi14\" \"-march\u003darmv5te\" \"-mtune\u003dxscale\" \"-msoft-float\" \"-marm\" \"-O0\" \"-UNDEBUG\" \"-fno-limit-debug-info\" \"-I-L/usr/include\" \"-ID:/AndroidStudioWorkSpase/ffmpeg-commands-executor/library/jni/include\" \"-ID:/AndroidStudioWorkSpase/ffmpeg-commands-executor/library/jni\" \"-DANDROID\" \"-DUSE_ARM_CONFIG\" \"-D__ANDROID_API__\u003d14\" \"-Wa,--noexecstack\" \"-Wformat\" \"-Werror\u003dformat-security\" \"--sysroot\" \"D:/sdk/ndk-bundle/build//../sysroot\" \"-isystem\" \"D:/sdk/ndk-bundle/build//../sysroot/usr/include/arm-linux-androideabi\""
+        },
+        {
+          "src": "D:\\AndroidStudioWorkSpase\\ffmpeg-commands-executor\\library\\jni\\show_func_wrapper.c",
+          "flags": "\"-gcc-toolchain\" \"D:/sdk/ndk-bundle/build//../toolchains/arm-linux-androideabi-4.9/prebuilt/windows-x86_64\" \"-fpic\" \"-ffunction-sections\" \"-funwind-tables\" \"-fstack-protector-strong\" \"-Wno-invalid-command-line-argument\" \"-Wno-unused-command-line-argument\" \"-no-canonical-prefixes\" \"-fno-integrated-as\" \"-g\" \"-target\" \"armv5te-none-linux-androideabi14\" \"-march\u003darmv5te\" \"-mtune\u003dxscale\" \"-msoft-float\" \"-marm\" \"-O0\" \"-UNDEBUG\" \"-fno-limit-debug-info\" \"-I-L/usr/include\" \"-ID:/AndroidStudioWorkSpase/ffmpeg-commands-executor/library/jni/include\" \"-ID:/AndroidStudioWorkSpase/ffmpeg-commands-executor/library/jni\" \"-DANDROID\" \"-DUSE_ARM_CONFIG\" \"-D__ANDROID_API__\u003d14\" \"-Wa,--noexecstack\" \"-Wformat\" \"-Werror\u003dformat-security\" \"--sysroot\" \"D:/sdk/ndk-bundle/build//../sysroot\" \"-isystem\" \"D:/sdk/ndk-bundle/build//../sysroot/usr/include/arm-linux-androideabi\""
+        }
+      ],
+      "output": "D:\\AndroidStudioWorkSpase\\ffmpeg-commands-executor\\library\\build\\intermediates\\ndkBuild\\debug\\obj\\local\\armeabi\\libffmpegjni.so"
+    }
+  },
+  "toolchains": {
+    "toolchain-armeabi": {
+      "cCompilerExecutable": "D:\\sdk\\ndk-bundle\\build\\..\\toolchains\\llvm\\prebuilt\\windows-x86_64\\bin\\clang.exe"
+    }
+  },
+  "cFileExtensions": [
+    "c"
+  ],
+  "cppFileExtensions": []
+}
