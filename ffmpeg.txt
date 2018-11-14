@@ -22,6 +22,8 @@ ffmpeg -i F:\tmp\alice.mp4 -vf unsharp F:\tmp\alice2.mp4
 
 ffmpeg -i video1.mp4 -i logo.png -filter_complex overlay video_logo.mp4
 
+ffmpeg -i "t.mp4" -i  "logo.png" -filter_complex overlay  "out2.mp4"
+
 
 ffplay  -i F:\tmp\alice.mp4  -vf drawtext=fontfile=C\\:\\\\Windows\\\\Fonts\\\\Arial.ttf:text=Welcom
 
@@ -33,23 +35,23 @@ ffplay -window_title myplayer -loop 2 F:\tmp\alice.mp4
 
 ffmpeg -i F:\tmp\alice.mp4 -vf drawtext="fontfile=C\\:\\\\Windows\\\\Fonts\\\\Arial.ttf:x=w-tw:fontcolor=white:fontsize=30:text='%{localtime\:%H\\\:%M\\\:%S}'" F:\tmp\alice2.mp4
 
-ffmpeg -i F:\tmp\alice.mp4 -t 10 -pix_fmt rgb24 F:\tmp\alice.gif
+ffmpeg -i sdcard/t.mp4 -t 10 -pix_fmt rgb24 gg.gif
 
 
-//µ÷ÓÃÉãÏñÍ·
+//è°ƒç”¨æ‘„åƒå¤´
 ffplay -f dshow  -i video="Integrated Camera"
 
-Ê×ÏÈÎÒÃÇĞèÒª²é¿´ÒÔÏÂÎÒÃÇµÄ×Ô¼ºÉÏµÄÉè±¸ĞÅÏ¢£¬ÔÚ°²×°ÁËscreen capture recorderÖ®ºó¾Í¿ÉÒÔÊ¹ÓÃÏÂÃæµÄÃüÁî:
+é¦–å…ˆæˆ‘ä»¬éœ€è¦æŸ¥çœ‹ä»¥ä¸‹æˆ‘ä»¬çš„è‡ªå·±ä¸Šçš„è®¾å¤‡ä¿¡æ¯ï¼Œåœ¨å®‰è£…äº†screen capture recorderä¹‹åå°±å¯ä»¥ä½¿ç”¨ä¸‹é¢çš„å‘½ä»¤:
 ffmpeg -list_devices true -f dshow -i dummy
 
-µ±È»ÎÒÃÇÊÇÒªÊ¹ÓÃrtmpĞ­ÒéµÄ£¬ËùÒÔÕâÀï¾ÍĞèÒª°ÑÊÓÆµÁ÷·¢ËÍµ½rtmp·şÎñ¶ËÈ¥£¬ÈçÏÂÃüÁî:
+å½“ç„¶æˆ‘ä»¬æ˜¯è¦ä½¿ç”¨rtmpåè®®çš„ï¼Œæ‰€ä»¥è¿™é‡Œå°±éœ€è¦æŠŠè§†é¢‘æµå‘é€åˆ°rtmpæœåŠ¡ç«¯å»ï¼Œå¦‚ä¸‹å‘½ä»¤:
 ffmpeg -f dshow -i video="Integrated Camera"  -f flv rtmp://localhost:1935/live/home
 
-//Â¼ÆÁ
+//å½•å±
 //ffmpeg -f dshow -i video="screen-capture-recorder" -maxrate 750k   -f flv rtmp://localhost:1935/live/home
 
 ffmpeg -f dshow -i video=screen-capture-recorder -f dshow -i audio=virtual-audio-capturer -vf scale=1280:720 -vcodec libx264 -acodec libvo_aacenc -f flv "rtmp://localhost:1935/live/home"
 
-ÏÂÃæÎÒÃÇ¿´ÒÔÏÂffmpegÈç¹û´ÓÕâĞ©Éè±¸ÖĞÂ¼ÖÆÊÓÆµ¡£
+ä¸‹é¢æˆ‘ä»¬çœ‹ä»¥ä¸‹ffmpegå¦‚æœä»è¿™äº›è®¾å¤‡ä¸­å½•åˆ¶è§†é¢‘ã€‚
 ffmpeg -f dshow -i video="Integrated Camera"  test.mp4
 
