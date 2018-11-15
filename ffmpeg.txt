@@ -61,3 +61,10 @@ ffmpeg -i sdcard/t.mp4 -i sdcard/logo.png -acodec copy -ar 44100 -ac 2 -b:a 96k 
 
 ffmpeg -i sdcard/t.mp4 -i sdcard/logo.png -filter_complex overlay sdcard/out.mp4
 
+视频剪切：
+ffmpeg -ss 00:00:05 -t 00:00:10 -i sdcard/t.mp4 -vcodec copy -acodec copy sdcard/out2.mp4
+
+ffmpeg -i sdcard/t.mp4 -s 320x240 sdcard/output.mp4
+
+ffmpeg -i sdcard/t.mp4 -vf scale=iw/2:ih/2 sdcard/output.mp4
+

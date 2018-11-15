@@ -1,5 +1,6 @@
 package cn.dxjia.ffmpeg.library;
 
+import android.text.TextUtils;
 import android.util.Log;
 
 public class FFmpegNativeHelper {
@@ -26,6 +27,9 @@ public class FFmpegNativeHelper {
 		String[] args = command.split(" ");
 		for(int i = 0; i < args.length; i++) {
 			Log.d("ffmpeg-jni", args[i]);
+			if(!TextUtils.isEmpty(args[i])){
+				args[i].trim();
+			}
 		}
 		try {
 			return ffmpeg_run(args);
